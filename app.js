@@ -19,9 +19,7 @@ function getWords() {
     setTimeout(() => {
         console.log("World");
     }, 2000);
-    setTimeout(() => {
-        console.log("Jessie");
-    }, 0);
+    console.log("Jessie");
     console.log("Melton");
 }
 getWords();
@@ -30,13 +28,14 @@ function done() {
     console.log("Done!");
 }
 
-function countdown(num, callback) { // if number is 3000 (milliseconds), counting down to 1 would take 2 seconds, so wait 2000 milliseconds by subtracting 1000 milliseconds.
-    setTimeout(() => {  
-         callback();
-    }, (num-1000));
+function countdown(num, callback) { 
+    for (let i=num; i>=1; i--) {
+        console.log(i);
+    } 
+    callback();
 }
 
-countdown(3000, done);
+countdown(3, done);
 
 // Promises
 let bool = true;
