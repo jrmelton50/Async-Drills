@@ -41,9 +41,8 @@ countdown(3, done);
 let bool = true;
 let orderingChickenSandwich = new Promise((resolve, reject) => {
     if (bool) {
-        let sandwich = "chicken";
-        let veggies = "lettuce";
-        let obj = new Object([sandwich, veggies]);
+        let obj = {sandwich: "chicken", veggies: "lettuce"};
+        // let obj = new Object([sandwich, veggies]);
         resolve(obj);
     }
     else {
